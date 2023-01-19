@@ -7,11 +7,11 @@
 * [**Support de cours**](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets/Ressources)
 * **Enseignants:**
 [Marin Bougeret](mailto:marin.bougeret@umontpellier.fr),
-[Gaëlle Hisler](mailto:gaelle.hisler@umontpellier.fr),<!--[Sophie Nabitz](mailto:sophie.nabitz@univ-avignon.fr),-->
+[Romain Lebreton](mailto:romain.lebreton@umontpellier.fr),<!--[Sophie Nabitz](mailto:sophie.nabitz@univ-avignon.fr),-->
 [Victor Poupet](mailto:victor.poupet@umontpellier.fr),
 [Gilles Trombettoni](mailto:gilles.trombettoni@umontpellier.fr),
 [Petru Valicov](mailto:petru.valicov@umontpellier.fr)
-* Le [forum Piazza](https://piazza.com/class/kyo4oooauez252) de ce cours pour poser vos questions
+* Le [forum Piazza](https://piazza.com/class/ld2tzi5k82via) de ce cours pour poser vos questions
 * [Email](mailto:petru.valicov@umontpellier.fr) pour toute question concernant le cours.
 
 <!--Avant de démarrer le TP, vérifiez que vous n'avez pas atteint votre quota d'espace de stockage autorisé :
