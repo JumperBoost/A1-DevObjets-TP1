@@ -121,15 +121,33 @@ L'intérêt d'utiliser Git c'est la détection des conflits entre les différent
 1. Modifiez le fichier `HelloWorld.java` afin d'afficher un message supplémentaire à la console : _"Je suis une version modifiée du code de l'exo 1"_. Compilez et exécutez pour vérifier.
 2. Versionnez le fichier `HelloWorld` avec `git add .` + `git commit`. Mais ne faites aucun `git push`. Votre version en local est actuellement _en avance_ par rapport au dépôt distant.
 3. Ouvrez un autre terminal et placez-vous à un autre endroit que le répertoire Exercice 1, par exemple `Dev-Objets`.
-4. Cloner une nouvelle copie du forkt GitLab '*dev-objets/votreUsername/tp1*'. Vous pouvez le faire avec la commande suivante :
-```sh
-~/Dev-Objets/$ git clone git@gitlabinfo.iutmontp.univ-montp2.fr:dev-objets/votreUsername/TP1.git copie_TP1
-```
+4. Cloner une nouvelle copie du fork GitLab '*dev-objets/votreUsername/tp1*'. Vous pouvez le faire avec la commande suivante :
+  ```sh
+  ~/Dev-Objets/$ git clone git@gitlabinfo.iutmontp.univ-montp2.fr:dev-objets/votreUsername/TP1.git copie_TP1
+  ```
   Un nouvel répertoire `copie_TP1` a été créé. Il contient la version du code de l'exercice 1. Modifiez son fichier  `HelloWorld.java` afin d'afficher le message _"Je suis une autre version modifiée du code de l'exo 1"_. Compilez et exécutez pour vérifier.
+
 5. Versionnez le fichier `HelloWorld.java` du dépôt `copie_TP1` avec `git add .` + `git commit`.
 
   Vous avez actuellement deux versions locale du dépôt distant avec des historiques qui ont divérgé : `tp1` et `copie_TP1`.
+
 6. Faites un `git push` du dépôt `copie_TP1`. Tout doit fonctionner normalement et le dépôt distant '*dev-objets/votreUsername/tp1*' a été mis à jour.
-7. Que se passera-t-il lorsque vous allez essayer de pousser le dépôt `tp1` modifié en début de l'exercice ?
+
+7. Que se passera-t-il lorsque vous allez essayer de faire un `git push` le dépôt `tp1` modifié en début de l'exercice ?
+
 8. Bien entendu il s'agit d'un conflit et Git ne vous laissera pas faire des bêtises gratuitement :smirk:
+  Le message d'erreur devrait rassembler à quelque chose comme ceci :
+
+  ```sh
+  ! [rejected]        master -> master (fetch first)
+  error: failed to push some refs to 'gitlabinfo.iutmontp.univ-montp2.fr:dev-objets/votreUsername/TP1.git'
+  hint: Updates were rejected because the remote contains work that you do
+  hint: not have locally. This is usually caused by another repository pushing
+  hint: to the same ref. You may want to first integrate the remote changes
+  hint: (e.g., 'git pull ...') before pushing again.
+  hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+  ```
+
+  Une solution simple est d'indiquer à Git laquelle des deux versions est la bonne. Disons que la bonne version est celle du dépôt distant et vous aimerez bien écraser les changements qui ont divergé dans votre dépôt local `tp1`. Dans ce cas il faudrait taper :
+
   
