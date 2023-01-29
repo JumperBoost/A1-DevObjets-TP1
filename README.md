@@ -99,11 +99,11 @@ Vous allez pouvoir commencer à travailler sur vos TP. Désormais le rendu, l'é
 Vous allez cloner le fork GitLab '*dev-objets/votreUsername/tp1*' sur votre machine (dans un répertoire `Dev-Objets` par exemple) et travailler désormais localement tout en _"versionnant"_ votre code et en poussant régulièrement vos réalisations.
 
 ### À faire pour chaque exercice
-Une fois qu'un exercice sera terminé, n'oubliez pas de pousser vos modifications sur votre fork de la manière suivante (dans cet exemple on suppose que vous êtes sur la branche master) :
+Une fois qu'un exercice sera terminé, n'oubliez pas de pousser vos modifications sur votre fork de la manière suivante (dans cet exemple on suppose que vous êtes sur la branche `main`) :
 ```sh
 ~/Dev-Objets/tp1$ git add fichiers_que_vous_avez_modifié
 ~/Dev-Objets/tp1$ git commit -m "Validation de l'exercice 1"
-~/Dev-Objets/tp1$ git push origin master
+~/Dev-Objets/tp1$ git push origin main
 ```
 
 **Remarque importante** : Rappelez-vous qu'un dépôt contient uniquement les fichiers nécessaires pour qu'un collaborateur puisse reconstruire le projet dans son propre environnement, et surtout _rien de plus_. Donc aucune information personnelle, aucun résultat de compilation, aucune configuration de son propre environnement de travail, ...
@@ -119,7 +119,7 @@ En règle générale une séparation entre le code source et le byte code est n�
 #### Exercice 2 -- Résolution de conflits
 L'intérêt d'utiliser Git c'est la détection des conflits entre les différentes versions d'un même projet. Nous allons voir un exemple d'un tel conflit et sa résolution :
 1. Modifiez le fichier `HelloWorld.java` afin d'afficher un message supplémentaire à la console : _"Je suis une version modifiée du code de l'exo 1"_. Compilez et exécutez pour vérifier.
-2. Versionnez le fichier `HelloWorld` avec `git add .` + `git commit`. Mais ne faites aucun `git push`. Votre version en local est actuellement _en avance_ par rapport au dépôt distant.
+2. Versionnez le fichier `HelloWorld` avec `git add .` + `git commit`. Mais ne faites aucun `git push`. Votre version en local est actuellement _en avance_ par rapport au dépôt distant (par défaut il s'appelle `origin`).
 3. Ouvrez un autre terminal et placez-vous à un autre endroit que le répertoire Exercice 1, par exemple `Dev-Objets`.
 4. Cloner une nouvelle copie du fork GitLab '*dev-objets/votreUsername/tp1*'. Vous pouvez le faire avec la commande suivante :
   ```sh
@@ -139,7 +139,7 @@ L'intérêt d'utiliser Git c'est la détection des conflits entre les différent
   Le message d'erreur devrait rassembler à quelque chose comme ceci :
 
   ```sh
-  ! [rejected]        master -> master (fetch first)
+  ! [rejected]        main -> main (fetch first)
   error: failed to push some refs to 'gitlabinfo.iutmontp.univ-montp2.fr:dev-objets/votreUsername/TP1.git'
   hint: Updates were rejected because the remote contains work that you do
   hint: not have locally. This is usually caused by another repository pushing
@@ -148,4 +148,17 @@ L'intérêt d'utiliser Git c'est la détection des conflits entre les différent
   hint: See the 'Note about fast-forwards' in 'git push --help' for details.
   ```
 
-  Il y a plusiers façon de résoudre le conflit et vous serez amené à les découvrir par vous-même en fonction de votre cas de figure. Dans notre cas, disons que la bonne version est celle du dépôt distant.
+  Il y a plusiers façon de résoudre le conflit en fonction du contexte et du besoin de l'utilisateur. Vous serez amené à les découvrir par vous-même tout au long du semestre. Dans notre cas, disons que la bonne version est celle du dépôt distant, alors il faudrait indiquer à Git d'aller chercher la version du dépôt distant (`git fetch`) et annuler tous les changements **locaux** qui ont suivi la version que vous voulez récupérer (`git reset`) :
+
+  ```sh
+  ~/Dev-Objets/tp1$ git fetch origin
+  ~/Dev-Objets/tp1$ git reset --hard origin/main
+  ```
+
+  Si c'était la version du dépôt distant que vous aimeriez écraser avec la version locale alors vous pouvez forcer le `git push` :
+
+  ```sh
+  ~/Dev-Objets/tp1$ git push -f origin main
+  ```
+
+  Notez qu'avoir des conflits entre les différents dépôts est un signe de mauvaise pratique de travail, qu'il faut absolument améliorer. Git est là pour vous le signaler et vous montrer à quel point une mauvaise organisation d'un travail collaboratif peut être pénible à gérer.
