@@ -96,23 +96,40 @@ Ultérieurement, lorsque vous aurez oublié tout ce que le tuto vous a appris, v
 ### Création de votre fork du TP1
 Vous allez pouvoir commencer à travailler sur vos TP. Désormais le rendu, l'évaluation et le suivi de votre travail passeront par GitLab. Dans le groupe [_Dev-Objets_](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets/) un sous-groupe qui vous est destiné a normalement été créé par les enseignants. Ce sous-groupe est privé (seuls vous et les enseignants y ont accès). Il contiendra tous les forks dédiés à vos TPs. Celui du TP1 y est normalement. Cette façon de faire permet d'une part de centraliser et uniformiser les rendus de chaque étudiant et, d'autre part, aux enseignants de suivre et aider plus facilement chaque étudiant en interagissant directement sur son dépôt.
 
-Vous allez cloner le fork GitLab '*dev-objets/votreUsername/tp1*' sur votre machine et travailler désormais localement tout en "versionnant" votre code et en poussant régulièrement vos réalisations.
+Vous allez cloner le fork GitLab '*dev-objets/votreUsername/tp1*' sur votre machine (dans un répertoire `Dev-Objets` par exemple) et travailler désormais localement tout en _"versionnant"_ votre code et en poussant régulièrement vos réalisations.
 
 ### À faire pour chaque exercice
 Une fois qu'un exercice sera terminé, n'oubliez pas de pousser vos modifications sur votre fork de la manière suivante (dans cet exemple on suppose que vous êtes sur la branche master) :
 ```sh
-~/tpPOO/tp1$ git add fichiers_que_vous_avez_modifié
-~/tpPOO/tp1$ git commit -m "Validation de l'exercice 1"
-~/tpPOO/tp1$ git push origin master
+~/Dev-Objets/tp1$ git add fichiers_que_vous_avez_modifié
+~/Dev-Objets/tp1$ git commit -m "Validation de l'exercice 1"
+~/Dev-Objets/tp1$ git push origin master
 ```
 
 **Remarque importante** : Rappelez-vous qu'un dépôt contient uniquement les fichiers nécessaires pour qu'un collaborateur puisse reconstruire le projet dans son propre environnement, et surtout _rien de plus_. Donc aucune information personnelle, aucun résultat de compilation, aucune configuration de son propre environnement de travail, ...
 
-### Un petit Salut le Monde qui va bien !
-#### Exercice 1
+#### Exercice 1 -- Un petit Salut le Monde qui va bien !
 Complétez la méthode principale de la classe `HelloWorld` (du répertoire [Exercice 1](Exercice1)) en faisant afficher le message _"Salut le monde"_.
 1. Dans un terminal, compilez, exécutez et vérifiez votre programme.
 2. Versionnez l'intégralité de votre travail avec `git add .` + `git commit`.
 3. Faites un `git push` sur le dépôt distant GitLab et comparez avec votre répertoire local. Quelle différence constatez-vous entre votre dépôt local et celui distant ? Pourquoi ?
 
 En règle générale une séparation entre le code source et le byte code est nécessaire pour une meilleure lisibilité de votre programme. Ce qui est généralement conseillé c'est d'avoir au moins deux répertoires à la racine de votre projet. Par exemple `src` + `bin` ou encore `src` + `target`. Pour les différentes options de compilation : https://docs.oracle.com/en/java/javase/17/docs/specs/man/javac.html
+
+#### Exercice 2 -- Résolution de conflits
+L'intérêt d'utiliser Git c'est la détection des conflits entre les différentes versions d'un même projet. Nous allons voir un exemple d'un tel conflit et sa résolution :
+1. Modifiez le fichier `HelloWorld.java` afin d'afficher un message supplémentaire à la console : _"Je suis une version modifiée du code de l'exo 1"_. Compilez et exécutez pour vérifier.
+2. Versionnez le fichier `HelloWorld` avec `git add .` + `git commit`. Mais ne faites aucun `git push`. Votre version en local est actuellement _en avance_ par rapport au dépôt distant.
+3. Ouvrez un autre terminal et placez-vous à un autre endroit que le répertoire Exercice 1, par exemple `Dev-Objets`.
+4. Cloner une nouvelle copie du forkt GitLab '*dev-objets/votreUsername/tp1*'. Vous pouvez le faire avec la commande suivante :
+```sh
+~/Dev-Objets/$ git clone git@gitlabinfo.iutmontp.univ-montp2.fr:dev-objets/votreUsername/TP1.git copie_TP1
+```
+  Un nouvel répertoire `copie_TP1` a été créé. Il contient la version du code de l'exercice 1. Modifiez son fichier  `HelloWorld.java` afin d'afficher le message _"Je suis une autre version modifiée du code de l'exo 1"_. Compilez et exécutez pour vérifier.
+5. Versionnez le fichier `HelloWorld.java` du dépôt `copie_TP1` avec `git add .` + `git commit`.
+
+  Vous avez actuellement deux versions locale du dépôt distant avec des historiques qui ont divérgé : `tp1` et `copie_TP1`.
+6. Faites un `git push` du dépôt `copie_TP1`. Tout doit fonctionner normalement et le dépôt distant '*dev-objets/votreUsername/tp1*' a été mis à jour.
+7. Que se passera-t-il lorsque vous allez essayer de pousser le dépôt `tp1` modifié en début de l'exercice ?
+8. Bien entendu il s'agit d'un conflit et Git ne vous laissera pas faire des bêtises gratuitement :smirk:
+  
