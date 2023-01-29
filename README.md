@@ -133,7 +133,7 @@ L'intérêt d'utiliser Git c'est la détection des conflits entre les différent
 
 6. Faites un `git push` du dépôt `copie_TP1`. Tout doit fonctionner normalement et le dépôt distant '*dev-objets/votreUsername/tp1*' a été mis à jour.
 
-7. Que se passera-t-il lorsque vous allez essayer de faire un `git push` le dépôt `tp1` modifié en début de l'exercice ?
+7. Que se passera-t-il lorsque vous allez essayer de faire un `git push` dans le répertoire `tp1` ?
 
 8. Bien entendu il s'agit d'un conflit et Git ne vous laissera pas faire des bêtises gratuitement :smirk:
   Le message d'erreur devrait rassembler à quelque chose comme ceci :
@@ -148,6 +148,4 @@ L'intérêt d'utiliser Git c'est la détection des conflits entre les différent
   hint: See the 'Note about fast-forwards' in 'git push --help' for details.
   ```
 
-  Une solution simple est d'indiquer à Git laquelle des deux versions est la bonne. Disons que la bonne version est celle du dépôt distant et vous aimerez bien écraser les changements qui ont divergé dans votre dépôt local `tp1`. Dans ce cas il faudrait taper :
-
-  
+  Il y a plusiers façon de résoudre le conflit et vous serez amené à les découvrir par vous-même en fonction de votre cas de figure. Dans notre cas, disons que la bonne version est celle du dépôt distant.
