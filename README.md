@@ -8,6 +8,7 @@
 * **Enseignants:**
 [Malo Gasquet](mailto:malo.gasquet@umontpellier.fr),
 [Sophie Nabitz](mailto:sophie.nabitz@univ-avignon.fr),
+[Cyrille Nadal](mailto:cyrille.nadal@umontpellier.fr)
 [Victor Poupet](mailto:victor.poupet@umontpellier.fr),
 [Gilles Trombettoni](mailto:gilles.trombettoni@umontpellier.fr),
 [Petru Valicov](mailto:petru.valicov@umontpellier.fr)
