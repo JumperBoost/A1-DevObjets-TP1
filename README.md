@@ -11,11 +11,7 @@
 [Victor Poupet](mailto:victor.poupet@umontpellier.fr),
 [Gilles Trombettoni](mailto:gilles.trombettoni@umontpellier.fr),
 [Petru Valicov](mailto:petru.valicov@umontpellier.fr)
-
-<!--[Marin Bougeret](mailto:marin.bougeret@umontpellier.fr),
-[Romain Lebreton](mailto:romain.lebreton@umontpellier.fr),-->
-
-<!--* Le [forum Piazza](https://piazza.com/class/ld2tzi5k82via) de ce cours pour poser vos questions-->
+* Le [forum Piazza](https://piazza.com/class/lrahb0patze3u4) de ce cours pour poser vos questions
 * [Email](mailto:petru.valicov@umontpellier.fr) pour toute question concernant le cours.
 
 <!--Avant de démarrer le TP, vérifiez que vous n'avez pas atteint votre quota d'espace de stockage autorisé :
@@ -29,7 +25,7 @@
 -->
 
 Les instructions de ce TP et de ceux qui vont suivre sont destinés pour les utilisateurs Linux (Ubuntu ou autre). Nous vous encourageons d'utiliser Linux car pour plusieurs cours vous en aurez besoin plus tard et plus généralement en tant qu'informaticien, c'est important d'être familiarisé avec.
-Si tout de même vous préférez utiliser Windows ou Mac OS, une adaptation est possible, mais cela vous demandera un peu de travail de votre côté. Discutez-en avec votre chargé de TD avant de démarrer le TP !
+Si tout de même, vous préférez utiliser Windows ou Mac OS, une adaptation est possible, mais cela vous demandera un peu de travail de votre côté. Discutez-en avec votre chargé de TD avant de démarrer le TP !
 
 ## TP 1 : Rappels de Git
 
@@ -93,12 +89,22 @@ git config --global user.name "Choucroute Garnie"
 git config --global user.email choucroute.garnie@etu.umontpellier.fr
 ```
 
-#### [Tutoriel Git](https://gitlabinfo.iutmontp.univ-montp2.fr/valicov/tutoGit1ereAnnee) de l'IUT -- à faire obligatoirement avant de poursuivre le TP
+Si vous ne l'avez pas fait, pensez à faire le [Tutoriel Git](https://gitlabinfo.iutmontp.univ-montp2.fr/valicov/tutoGit1ereAnnee) de l'IUT, afin de poursuivre le TP.
 
-Ultérieurement, lorsque vous aurez oublié tout ce que le tuto vous a appris, vous pourrez utiliser ce mini [document](https://www.lirmm.fr/~pvalicov/Cours/archives/Aix/M2104/Demarrer%20avec%20Git) qui résume les fonctionnalités principales de Git.
+Voici une petite recap pour voir si vous avez bien suivi :
 
-### Création de votre fork du TP1
-Vous allez pouvoir commencer à travailler sur vos TP. Désormais le rendu, l'évaluation et le suivi de votre travail passeront par GitLab. Dans le groupe [Dev-Objets_](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets/) un sous-groupe qui vous est destiné a normalement été créé par les enseignants. Le sous-groupe doit s'appeler `etu/votreUsername` Ce sous-groupe est privé (seuls vous et les enseignants y ont accès). Il contiendra tous les forks dédiés à vos TPs. Celui du TP1 y est déjà. Cette façon de faire permet d'une part de centraliser et uniformiser les rendus de chaque étudiant et, d'autre part, aux enseignants de suivre et aider plus facilement chaque étudiant en interagissant directement sur son dépôt.
+* C'est quoi un _depôt Git_ ?
+* Qu'est-ce qu'un _fork_ Git ?
+* Que fait `git clone` ?
+* Quelle est la différence entre `git add` et `git commit` ? Pourquoi avoir séparé les deux commandes ?
+* À quoi correspond le raccourci `git push` ?
+* À quoi correspond le raccourci `git pull` ?
+
+
+<!--Ultérieurement, lorsque vous aurez oublié tout ce que le tuto vous a appris, vous pourrez utiliser ce mini [document](https://www.lirmm.fr/~pvalicov/Cours/archives/Aix/M2104/Demarrer%20avec%20Git) qui résume les fonctionnalités principales de Git.-->
+
+### Création de vos forks
+Le rendu et le suivi de votre travail passeront par GitLab. Dans le groupe [Dev-Objets](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets/), un sous-groupe qui vous est destiné a normalement été créé par les enseignants. Le sous-groupe doit s'appeler `etu/votreUsername` Ce sous-groupe est privé (seuls vous et les enseignants y ont accès). Il contiendra tous les forks dédiés à vos TPs. Celui du TP1 y est déjà. Cette façon de faire permet d'une part de centraliser et uniformiser les rendus de chaque étudiant et, d'autre part, aux enseignants de suivre et aider plus facilement chaque étudiant en interagissant directement sur son dépôt.
 
 Vous allez cloner le fork GitLab '*dev-objets/etu/votreUsername/tp1*' sur votre machine (dans un répertoire `Dev-Objets` par exemple) et travailler désormais localement tout en _"versionnant"_ votre code et en poussant régulièrement vos réalisations.
 
