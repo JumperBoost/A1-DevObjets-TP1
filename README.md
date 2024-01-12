@@ -6,12 +6,14 @@
 
 * [**Support de cours**](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets/Ressources)
 * **Enseignants:**
-[Marin Bougeret](mailto:marin.bougeret@umontpellier.fr),
-[Romain Lebreton](mailto:romain.lebreton@umontpellier.fr),<!--[Sophie Nabitz](mailto:sophie.nabitz@univ-avignon.fr),-->
+<!--[Marin Bougeret](mailto:marin.bougeret@umontpellier.fr),
+[Romain Lebreton](mailto:romain.lebreton@umontpellier.fr),-->
+[Malo Gasquet](mailto:malo.gasquet@umontpellier.fr),
+[Sophie Nabitz](mailto:sophie.nabitz@univ-avignon.fr),
 [Victor Poupet](mailto:victor.poupet@umontpellier.fr),
 [Gilles Trombettoni](mailto:gilles.trombettoni@umontpellier.fr),
 [Petru Valicov](mailto:petru.valicov@umontpellier.fr)
-* Le [forum Piazza](https://piazza.com/class/ld2tzi5k82via) de ce cours pour poser vos questions
+<!--* Le [forum Piazza](https://piazza.com/class/ld2tzi5k82via) de ce cours pour poser vos questions-->
 * [Email](mailto:petru.valicov@umontpellier.fr) pour toute question concernant le cours.
 
 <!--Avant de démarrer le TP, vérifiez que vous n'avez pas atteint votre quota d'espace de stockage autorisé :
@@ -149,14 +151,14 @@ Un des avantages d'utiliser Git est la détection des potentiels conflits entre 
     ```
 
     Il y a plusieurs façons de résoudre le conflit en fonction du contexte et du besoin de l'utilisateur. Vous serez amené à les découvrir par vous-même tout au long du semestre. Dans notre cas, disons que la bonne version est celle du dépôt distant, alors il faudrait indiquer à Git d'aller la chercher (`git fetch`) et annuler tous les changements **locaux** qui ont suivi la version que vous voulez récupérer (`git reset`) :
-  
+
     ```sh
     ~/Dev-Objets/tp1$ git fetch origin
     ~/Dev-Objets/tp1$ git reset --hard origin/main
     ```
-  
+
     Si c'était la version du dépôt distant que vous aimeriez écraser avec la version locale alors vous pouvez forcer le `git push` :
-  
+
     ```sh
     ~/Dev-Objets/tp1$ git push -f origin main
     ```
