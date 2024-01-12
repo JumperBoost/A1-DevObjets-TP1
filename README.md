@@ -6,13 +6,15 @@
 
 * [**Support de cours**](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets/Ressources)
 * **Enseignants:**
-<!--[Marin Bougeret](mailto:marin.bougeret@umontpellier.fr),
-[Romain Lebreton](mailto:romain.lebreton@umontpellier.fr),-->
 [Malo Gasquet](mailto:malo.gasquet@umontpellier.fr),
 [Sophie Nabitz](mailto:sophie.nabitz@univ-avignon.fr),
 [Victor Poupet](mailto:victor.poupet@umontpellier.fr),
 [Gilles Trombettoni](mailto:gilles.trombettoni@umontpellier.fr),
 [Petru Valicov](mailto:petru.valicov@umontpellier.fr)
+
+<!--[Marin Bougeret](mailto:marin.bougeret@umontpellier.fr),
+[Romain Lebreton](mailto:romain.lebreton@umontpellier.fr),-->
+
 <!--* Le [forum Piazza](https://piazza.com/class/ld2tzi5k82via) de ce cours pour poser vos questions-->
 * [Email](mailto:petru.valicov@umontpellier.fr) pour toute question concernant le cours.
 
@@ -29,11 +31,11 @@
 Les instructions de ce TP et de ceux qui vont suivre sont destinés pour les utilisateurs Linux (Ubuntu ou autre). Nous vous encourageons d'utiliser Linux car pour plusieurs cours vous en aurez besoin plus tard et plus généralement en tant qu'informaticien, c'est important d'être familiarisé avec.
 Si tout de même vous préférez utiliser Windows ou Mac OS, une adaptation est possible, mais cela vous demandera un peu de travail de votre côté. Discutez-en avec votre chargé de TD avant de démarrer le TP !
 
-## TP 1 : Introduction à Git et premier projet versionné
+## TP 1 : Rappels de Git
 
 L'objectif de la première partie de ce TP est de vous rappeler les concepts principaux liés à la [gestion de version](https://fr.wikipedia.org/wiki/Gestion_de_versions) avec [Git](https://git-scm.com/). Cet outil vous sera indispensable durant l'apprentissage de ce cours et dans d'autres matières durant votre cursus. En effet, au-delà de la **programmation orientée objets** (l'objectif pédagogique principal du cours), en tant que futur développeur, vous devriez apprendre à être organisé et à collaborer avec d'autres développeurs. <!-- Vous apprendrez également à ne pas réinventer la roue : l'informatique est aujourd'hui une science très riche, donc savoir se faire assister par des outils informatiques est essentiel. Pour beaucoup d'entre vous ce TP sera la première occasion de se confronter à l'utilisation d'un [IDE](https://fr.wikipedia.org/wiki/Environnement_de_d%C3%A9veloppement), aux [tests unitaires](https://fr.wikipedia.org/wiki/Test_unitaire) et à des outils de gestion de cycle de vie logiciel.-->
 
-Pour conserver vos réalisations et permettre à votre enseignant de suivre votre avancement, vous allez apprendre à versionner votre travail avec Git sur la plateforme collaborative [GitLab](https://gitlabinfo.iutmontp.univ-montp2.fr/) du département informatique de l'IUT Montpellier-Sète. Pendant ce module, vous allez principalement écrire du code pour vous-même et qui sera partagé avec vos enseignants. Lorsque vous allez travailler sur le **projet** à plusieurs vous allez pouvoir mesurer tout le potentiel d'un gestionnaire de version. Car tout l'intérêt de travailler avec Git c'est de pouvoir __collaborer__ de manière organisée.
+Nous allons utiliser la plateforme collaborative [GitLab](https://gitlabinfo.iutmontp.univ-montp2.fr/) du département informatique de l'IUT Montpellier-Sète. Normalement, vous vous êtes déjà familiarisé au Semestre 1. Pendant ce module, vous allez principalement écrire du code pour vous-même et qui sera partagé avec vos enseignants. Lorsque vous allez travailler sur le **projet** à plusieurs vous allez pouvoir mesurer tout le potentiel d'un gestionnaire de version. Car tout l'intérêt de travailler avec Git c'est de pouvoir __collaborer__ de manière organisée.
 
 
 <!--#### Création d'un compte Github
@@ -96,7 +98,7 @@ git config --global user.email choucroute.garnie@etu.umontpellier.fr
 Ultérieurement, lorsque vous aurez oublié tout ce que le tuto vous a appris, vous pourrez utiliser ce mini [document](https://www.lirmm.fr/~pvalicov/Cours/archives/Aix/M2104/Demarrer%20avec%20Git) qui résume les fonctionnalités principales de Git.
 
 ### Création de votre fork du TP1
-Vous allez pouvoir commencer à travailler sur vos TP. Désormais le rendu, l'évaluation et le suivi de votre travail passeront par GitLab. Dans le groupe [_Dev-Objets_](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets/) un sous-groupe qui vous est destiné a normalement été créé par les enseignants. Le sous-groupe doit s'appeler `etu/votreUsername` Ce sous-groupe est privé (seuls vous et les enseignants y ont accès). Il contiendra tous les forks dédiés à vos TPs. Celui du TP1 y est déjà. Cette façon de faire permet d'une part de centraliser et uniformiser les rendus de chaque étudiant et, d'autre part, aux enseignants de suivre et aider plus facilement chaque étudiant en interagissant directement sur son dépôt.
+Vous allez pouvoir commencer à travailler sur vos TP. Désormais le rendu, l'évaluation et le suivi de votre travail passeront par GitLab. Dans le groupe [Dev-Objets_](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets/) un sous-groupe qui vous est destiné a normalement été créé par les enseignants. Le sous-groupe doit s'appeler `etu/votreUsername` Ce sous-groupe est privé (seuls vous et les enseignants y ont accès). Il contiendra tous les forks dédiés à vos TPs. Celui du TP1 y est déjà. Cette façon de faire permet d'une part de centraliser et uniformiser les rendus de chaque étudiant et, d'autre part, aux enseignants de suivre et aider plus facilement chaque étudiant en interagissant directement sur son dépôt.
 
 Vous allez cloner le fork GitLab '*dev-objets/etu/votreUsername/tp1*' sur votre machine (dans un répertoire `Dev-Objets` par exemple) et travailler désormais localement tout en _"versionnant"_ votre code et en poussant régulièrement vos réalisations.
 
