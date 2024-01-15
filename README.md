@@ -96,10 +96,12 @@ Voici une petite recap pour voir si vous avez bien suivi :
 
 * C'est quoi un _depôt Git_ ?
 * Qu'est-ce qu'un _fork_ Git ?
+* Quelle est la différence entre Git et GitLab/GitHub ?
 * Que fait `git clone` ?
 * Quelle est la différence entre `git add` et `git commit` ? Pourquoi avoir séparé les deux commandes ?
 * À quoi correspond le raccourci `git push` ?
 * À quoi correspond le raccourci `git pull` ?
+* Qu'est-ce qu'un _conflit_ Git ?
 
 
 <!--Ultérieurement, lorsque vous aurez oublié tout ce que le tuto vous a appris, vous pourrez utiliser ce mini [document](https://www.lirmm.fr/~pvalicov/Cours/archives/Aix/M2104/Demarrer%20avec%20Git) qui résume les fonctionnalités principales de Git.-->
